@@ -1,3 +1,6 @@
+我在学习企业价值评估时发现：传统DCF估值高度依赖Excel手工操作，效率低、假设不透明、风险分析不足。
+
+因此我开发了这个 DCF-valuation —— 一个将业务逻辑与现代Web技术结合的交互式估值工具，旨在推动传统估值向工程化、智能化方向升级。
 # 📊 DCF 多阶段估值模型 — Streamlit 交互式应用
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
