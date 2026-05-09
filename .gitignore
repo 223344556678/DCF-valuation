@@ -1,0 +1,56 @@
+# ─── Python ───────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+*.log
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+coverage/
+htmlcov/
+.coverage
+*.manifest
+*.spec
+
+# ─── Virtual environments ─────────────────────────
+venv/
+.venv/
+env/
+.env
+*.env
+
+# ─── Streamlit ────────────────────────────────────
+.streamlit/
+
+# ─── IDEs ─────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── OS ───────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Jupyter ──────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ─── User-generated data ──────────────────────────
+#   All Excel / CSV / PDF output is user data and
+#   should not be committed. The single exception is
+#   the batch-template inside sample_data/.
+*.xlsx
+*.xls
+*.csv
+*.pdf
+
+# ─── Un-ignore sample data ────────────────────────
+!sample_data/
