@@ -520,17 +520,42 @@ def plot_batch_comparison(result_df: pd.DataFrame) -> go.Figure:
 # ============================================================
 
 def find_chinese_font():
-    """查找系统可用的中文字体"""
+    """查找或下载中文字体，返回字体路径"""
+    # Windows 字体
     candidates = [
         'C:/Windows/Fonts/msyh.ttc',
         'C:/Windows/Fonts/simhei.ttf',
         'C:/Windows/Fonts/simsun.ttc',
         'C:/Windows/Fonts/msyhbd.ttc',
     ]
+    # Linux/macOS 常见中文字体
+    candidates += [
+        '/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc',
+        '/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc',
+        '/usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc',
+        '/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf',
+        '/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc',
+        '/usr/share/fonts/truetype/wqy/wqy-microhei.ttc',
+        '/System/Library/Fonts/Hiragino Sans GB.ttc',
+        '/System/Library/Fonts/PingFang.ttc',
+        '/Library/Fonts/Hiragino Sans GB.ttc',
+    ]
     for p in candidates:
         if os.path.exists(p):
             return p
-    return None
+
+    # 运行时下载 Noto Sans SC（开源，OFL 协议）
+    import urllib.request
+    font_dir = os.path.join(os.path.expanduser('~'), '.fonts')
+    font_path = os.path.join(font_dir, 'NotoSansSC-Regular.ttf')
+    if not os.path.exists(font_path):
+        os.makedirs(font_dir, exist_ok=True)
+        url = 'https://github.com/google/fonts/raw/main/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf'
+        try:
+            urllib.request.urlretrieve(url, font_path)
+        except Exception:
+            return None
+    return font_path if os.path.exists(font_path) else None
 
 
 def generate_pdf_report(params: DCFParams, result: DCFResult,
