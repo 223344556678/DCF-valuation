@@ -681,7 +681,7 @@ def generate_pdf_report(params: DCFParams, result: DCFResult,
     pdf.set_text_color(160, 174, 192)
     pdf.cell(0, 5, '本报告由 DCF 估值模型自动生成 | 仅供参考，不构成投资建议', align='C')
 
-    return pdf.output()
+    return bytes(pdf.output())
 
 
 # ============================================================
