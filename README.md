@@ -6,7 +6,7 @@
 
 **将传统 Excel 估值流程工程化的交互式工具** — 把手工 DCF 建模中效率低、假设不透明、风险分析不足的问题用代码解决，让估值从单点估计升级为多维分析决策。
 
-> 🚀 **Live Demo**: [Hugging Face Spaces](https://huggingface.co/spaces/guliguliguigui/dcf-valuation)
+> 🚀 **Live Demo**: [Streamlit Cloud](https://dcf-valuation-hxbm8jxqvbmdctnxrxbv3a.streamlit.app/)
 
 English version: [README_EN.md](README_EN.md)
 

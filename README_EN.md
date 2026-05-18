@@ -6,7 +6,7 @@
 
 **Engineering the traditional Excel-based DCF workflow into a programmatic valuation tool** — replacing manual, opaque, single-point estimates with automated, auditable, multi-dimensional analysis.
 
-> 🚀 **Live Demo**: [Hugging Face Spaces](https://huggingface.co/spaces/guliguliguigui/dcf-valuation)
+> 🚀 **Live Demo**: [Streamlit Cloud](https://dcf-valuation-hxbm8jxqvbmdctnxrxbv3a.streamlit.app/)
 
 ---
 
